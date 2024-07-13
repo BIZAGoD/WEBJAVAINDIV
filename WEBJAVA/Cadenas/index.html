@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Concatenación de Cadenas</title>
+</head>
+<body>
+  <h1>Concatenación de Cadenas</h1>
+  <button onclick="pedirCadenas()">Comenzar</button>
+
+  <p id="resultado"></p>
+
+  <script>
+    function pedirCadenas() {
+      let cadenas = [];
+      let cadena;
+
+      while (true) {
+        cadena = prompt("Introduzca una cadena de texto (pulsa 'Cancelar' para terminar):");
+        if (cadena === null) {
+          break;
+        }
+        cadenas.push(cadena);
+      }
+
+      let resultado = cadenas.join("-");
+      document.getElementById("resultado").textContent = resultado;
+    }
+  </script>
+</body>
+</html>
